@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.app">
+
+<application>
+<service android:name=".FirebaseMessagingService"
+             android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+
+    <!-- Optional: Set default notification icon and color -->
+    <meta-data android:name="com.google.firebase.messaging.default_notification_icon"
+               android:resource="@android:drawable/ic_menu_share"/>
+    <meta-data android:name="com.google.firebase.messaging.default_notification_color"
+               android:value="#FF0000" />
+
+    <!-- Optional: Notification channels (for Android 8.0 and higher) -->
+    <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id"
+               android:value="android.permission.INTERNET"/>
+    <!-- Other components and permissions -->
+    </application>
+</manifest>
